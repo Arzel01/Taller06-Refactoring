@@ -14,6 +14,13 @@ public abstract class Empleado {
 
     public abstract double calcularSalario();
 
+    private void printDetalles() {
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Genero: " + getNombre());
+        System.out.println("Horas trabajadas: " + getHorasTrabajadas());
+        System.out.println("Departamento: " + getDepartamento());
+    }
+
     public String getNombre() {
         return nombre;
     }
