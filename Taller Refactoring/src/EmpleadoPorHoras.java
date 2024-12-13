@@ -5,12 +5,10 @@ public class EmpleadoPorHoras extends Empleado {
         this.tarifaHora = tarifaHora;
     }
 
-    public void imprimirDetalles() {
-        System.out.println("Nombre: " + super.getNombre());
-        System.out.println("Genero: " + super.getNombre());
+    @override
+    public void printDetalles() {
+        super.printDetalles();
         System.out.println("Salario: " + this.calcularSalario());
-        System.out.println("Horas trabajadas: " + super.getHorasTrabajadas());
-        System.out.println("Departamento: " + super.getDepartamento());
     }
 
     @Override
