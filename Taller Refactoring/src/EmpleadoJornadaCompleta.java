@@ -7,6 +7,23 @@ public abstract class EmpleadoJornadaCompleta extends Empleado {
         this.salarioBase = salarioBase;
     }
 
+    public double calcularSalario() {
+        if (salarioBase <= 0) {
+            throw new IllegalArgumentException("El salario debe ser mayor o igual a 0");
+        }
+        if (horasTrabajadas < 0) {
+            throw new IllegalArgumentException("Las horas trabajadas deben ser mayor o igual a 0");
+        }
+    
+        double salarioTotal = salarioBase;
+    
+        if (horasTrabajadas > 40) {
+            salarioTotal += (horasTrabajadas - 40) * 50; 
+        }
+
+        return departamento.calcularValorDepartamento(salarioTotal);
+    }
+
     public void getSalarioBase(){
         return salarioBase;
     }
