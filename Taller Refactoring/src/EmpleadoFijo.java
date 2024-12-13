@@ -7,16 +7,9 @@ public class EmpleadoFijo extends EmpleadoJornadaCompleta {
         
     }
 
-    public void imprimirDetalles() {
-        printDetalles();
-    }
-
+    @override
     private void printDetalles() {
-        System.out.println("Nombre: " + super.getNombre());
-        System.out.println("Genero: " + super.getNombre());
-        System.out.println("Salario: " + super.getSalarioBase());
-        System.out.println("Horas trabajadas: " + super.getHorasTrabajadas());
-        System.out.println("Departamento: " + super.getDepartamento());
+        super.printDetalles();
         System.out.println("bonoAnual: " + bonoAnual);
     }
 
