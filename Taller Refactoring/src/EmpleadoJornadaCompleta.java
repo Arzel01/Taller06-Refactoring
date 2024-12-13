@@ -7,34 +7,35 @@ public abstract class EmpleadoJornadaCompleta extends Empleado {
         this.salarioBase = salarioBase;
     }
 
-    @override
+    @Override
     public double calcularSalario() {
         if (salarioBase <= 0) {
             throw new IllegalArgumentException("El salario debe ser mayor o igual a 0");
         }
-        if (horasTrabajadas < 0) {
+        if (getHorasTrabajadas() < 0) {
             throw new IllegalArgumentException("Las horas trabajadas deben ser mayor o igual a 0");
         }
     
         double salarioTotal = salarioBase;
     
-        if (horasTrabajadas > 40) {
-            salarioTotal += (horasTrabajadas - 40) * 50; 
+        if (getHorasTrabajadas() > 40) {
+            salarioTotal += (getHorasTrabajadas() - 40) * 50; 
         }
 
-        return departamento.calcularValorDepartamento(salarioTotal);
+        return getDepartamento().calcularValorDepartamento(salarioTotal);
     }
 
-    @override
-    private void printDetalles() {
-        super.printDetalles();
-        System.out.println("Salario: " + super.getSalarioBase());
-    }
+    @Override
+        public void imprimirDetalles(){
+            super.imprimirDetalles();
+            System.out.println("Salario: " + salarioBase);
+        }
 
-    public void getSalarioBase(){
+    public double getSalarioBase(){
         return salarioBase;
     }
 
     public double setSalarioBase(double salarioBase){
-        this.salarioBase = salarioBase;
+        return this.salarioBase = salarioBase;
     }
+}

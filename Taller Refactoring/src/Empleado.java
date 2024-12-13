@@ -14,6 +14,12 @@ public abstract class Empleado {
 
     public abstract double calcularSalario();
 
+
+    public void imprimirDetalles(){
+        printDetalles();
+    }
+
+
     private void printDetalles() {
         System.out.println("Nombre: " + getNombre());
         System.out.println("Genero: " + getNombre());

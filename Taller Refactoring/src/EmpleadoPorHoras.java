@@ -5,15 +5,23 @@ public class EmpleadoPorHoras extends Empleado {
         this.tarifaHora = tarifaHora;
     }
 
-    @override
-    public void printDetalles() {
-        super.printDetalles();
+    @Override
+    public void imprimirDetalles() {
+        super.imprimirDetalles();
         System.out.println("Salario: " + this.calcularSalario());
     }
 
     @Override
     public double calcularSalario() {
-        return super.getHorasTrabajadas() * super.getTarifaHora();
+        return super.getHorasTrabajadas() * tarifaHora;
+    }
+
+    public void setTarifaHora(double tarifaHora){
+        this.tarifaHora = tarifaHora;
+    }
+    
+    public double getTarifaHora(){
+        return this.tarifaHora;
     }
 
     // Más metodos

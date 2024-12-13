@@ -16,8 +16,8 @@ public class Main {
         empresa.contratarEmpleado(emp2);
         empresa.contratarEmpleado(emp3);
 
-        emp1.printDetalles();
-        emp2.printDetalles();
-        emp3.printDetalles();
+        emp1.imprimirDetalles();
+        emp2.imprimirDetalles();
+        emp3.imprimirDetalles();
     }
 }

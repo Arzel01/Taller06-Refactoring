@@ -6,9 +6,9 @@ public class EmpleadoTemporario extends EmpleadoJornadaCompleta {
         this.mesesContrato = mesesContrato;
     }
 
-    @override
-    public void printDetalles() {
-        super.printDetalles()
+    @Override
+    public void imprimirDetalles() {
+        super.imprimirDetalles();
         System.out.println("Meses de contrato: " + mesesContrato);
     }
 

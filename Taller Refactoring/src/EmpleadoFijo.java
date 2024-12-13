@@ -7,11 +7,11 @@ public class EmpleadoFijo extends EmpleadoJornadaCompleta {
         
     }
 
-    @override
-    private void printDetalles() {
-        super.printDetalles();
-        System.out.println("bonoAnual: " + bonoAnual);
-    }
+    @Override
+        public void imprimirDetalles() {
+            super.imprimirDetalles();
+            System.out.println("bonoAnual: " + bonoAnual);
+        }
 
     // Más metodos
 }
