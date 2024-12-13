@@ -24,6 +24,12 @@ public abstract class EmpleadoJornadaCompleta extends Empleado {
         return departamento.calcularValorDepartamento(salarioTotal);
     }
 
+    @override
+    private void printDetalles() {
+        super.printDetalles();
+        System.out.println("Salario: " + super.getSalarioBase());
+    }
+
     public void getSalarioBase(){
         return salarioBase;
     }
