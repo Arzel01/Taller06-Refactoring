@@ -1,12 +1,9 @@
-public class EmpleadoFijo extends Empleado {
+public class EmpleadoFijo extends EmpleadoJornadaCompleta {
     private double bonoAnual;
-    private double salarioBase;
-    
 
     public EmpleadoFijo(String nombre, double salarioBase, int horasTrabajadas, Departamento departamento, double bonoAnual, String genero) {
-        super(nombre, horasTrabajadas, departamento, genero);
+        super(nombre, salarioBase, horasTrabajadas, departamento, genero);
         this.bonoAnual = bonoAnual;
-        this.salarioBase = salarioBase;
         
     }
 
