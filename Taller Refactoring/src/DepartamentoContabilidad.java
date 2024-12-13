@@ -1,4 +1,5 @@
-public class DepartmentoContabilidad extends Departamento{
+public class DepartamentoContabilidad extends Departamento{
+
 
     @Override
     public double calcularValorDepartamento(double salario) {

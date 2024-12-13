@@ -70,8 +70,16 @@ public class Empleado {
         return genero;
     }
 
-    public void setTarifaHora(String genero) {
+    public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    public Departamento getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(Departamento departamento) {
+        this.departamento = departamento;
     }
 
     // Más metodos
