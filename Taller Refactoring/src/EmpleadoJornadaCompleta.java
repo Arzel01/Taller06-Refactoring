@@ -2,7 +2,7 @@
 public abstract class EmpleadoJornadaCompleta extends Empleado {
     private double salarioBase;
     
-    public EmpleadoFijo(String nombre, double salarioBase, int horasTrabajadas, Departamento departamento, double bonoAnual, String genero) {
+    public EmpleadoJornadaCompleta(String nombre, double salarioBase, int horasTrabajadas, Departamento departamento, String genero) {
         super(nombre, horasTrabajadas, departamento, genero);
         this.salarioBase = salarioBase;
         
