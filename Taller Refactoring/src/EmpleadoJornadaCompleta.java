@@ -7,6 +7,7 @@ public abstract class EmpleadoJornadaCompleta extends Empleado {
         this.salarioBase = salarioBase;
     }
 
+    @override
     public double calcularSalario() {
         if (salarioBase <= 0) {
             throw new IllegalArgumentException("El salario debe ser mayor o igual a 0");
