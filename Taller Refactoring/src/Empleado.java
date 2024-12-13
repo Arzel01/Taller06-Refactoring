@@ -2,10 +2,12 @@ public class Empleado {
     private String nombre;
     private Departamento departamento;
     private String genero;
+    private int horasTrabajadas;
 
     public Empleado(){}
-    public Empleado(String nombre, Departamento departamento, String genero) {
+    public Empleado(String nombre, int horasTrabajadas, Departamento departamento, String genero) {
         this.nombre = nombre;
+        this.horasTrabajadas = horasTrabajadas;
         this.departamento = departamento;
         this.genero = genero;
     }
@@ -49,6 +51,14 @@ public class Empleado {
 
     public void setDepartamento(Departamento departamento) {
         this.departamento = departamento;
+    }
+
+    public void setHorasTrabajadas(int horasTrabajadas){
+        this.horasTrabajadas = horasTrabajadas;
+    }
+    
+    public int getHorasTrabajadas(){
+        return this.horasTrabajadas;
     }
 
     // Más metodos
