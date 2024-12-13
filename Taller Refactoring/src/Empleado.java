@@ -1,4 +1,4 @@
-public class Empleado {
+public abstract class Empleado {
     private String nombre;
     private Departamento departamento;
     private String genero;
@@ -12,22 +12,7 @@ public class Empleado {
         this.genero = genero;
     }
 
-    public double calcularSalario() {
-        if (salarioBase <= 0) {
-            throw new IllegalArgumentException("El salario debe ser mayor o igual a 0");
-        }
-        if (horasTrabajadas < 0) {
-            throw new IllegalArgumentException("Las horas trabajadas deben ser mayor o igual a 0");
-        }
-    
-        double salarioTotal = salarioBase;
-    
-        if (horasTrabajadas > 40) {
-            salarioTotal += (horasTrabajadas - 40) * 50; 
-        }
-
-        return departamento.calcularValorDepartamento(salarioTotal);
-    }
+    public abstract double calcularSalario();
 
     public String getNombre() {
         return nombre;
